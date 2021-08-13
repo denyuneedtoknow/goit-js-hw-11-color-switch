@@ -9,7 +9,7 @@ const colors = [
 const background = document.querySelector('body')
 const btnStart = document.querySelector('[data-action="start"]')
 const btnStop = document.querySelector('[data-action="stop"]')
-
+let intervalId = null
 
 background.style.backgroundColor = '#FFFFFF'
 
@@ -27,7 +27,7 @@ function colorChanger() {
 }
 
 function onBtnStartClick() {
-    intervalId = setInterval(colorChanger, 1000)
+   intervalId = setInterval(colorChanger, 1000)
     btnStart.setAttribute("disabled", "disabled");
 }
 
